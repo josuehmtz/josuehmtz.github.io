@@ -1,5 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import * as pages from '../pages'
+import * as components from '../components'
 
 const router = createBrowserRouter([
     {
@@ -26,6 +27,9 @@ const router = createBrowserRouter([
 
 export const AppRouter = () => {
   return (
-    <RouterProvider router={router} />
+    <>
+      <components.NavBar />
+      <RouterProvider router={router} />
+    </>
   )
 }
