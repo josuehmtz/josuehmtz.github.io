@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import './App.css'
 import { AppRouter } from './router/AppRouter'
+import {AuthProvider} from './context'
 
-function App() {
+export const App = () => {
   return (
-    <AppRouter />
+    <AuthProvider>
+      <AppRouter />
+    </AuthProvider>
   )
 }
 
