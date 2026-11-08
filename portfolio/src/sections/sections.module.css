@@ -1,0 +1,85 @@
+/* ── Hero ───────────────────────────────── */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 64px 0 88px;
+}
+
+@media (min-width: 640px) {
+  .hero {
+    padding: 120px 0 128px;
+  }
+}
+
+.heroTitle:global(.ant-typography) {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(3rem, 10vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.heroLead:global(.ant-typography) {
+  max-width: 34rem;
+  margin: 0;
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  line-height: 1.6;
+}
+
+/* ── About ──────────────────────────────── */
+.aboutGrid {
+  display: grid;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .aboutGrid {
+    grid-template-columns: 1.6fr 1fr;
+    gap: 64px;
+  }
+}
+
+.aboutText:global(.ant-typography) {
+  max-width: 60ch;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.label:global(.ant-typography) {
+  display: block;
+  margin-bottom: 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+/* ── Contact ────────────────────────────── */
+.contactLead:global(.ant-typography) {
+  max-width: 34rem;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.email {
+  display: inline-block;
+  margin: 8px 0 32px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  font-size: clamp(1.75rem, 6vw, 3.25rem);
+  line-height: 1.15;
+  color: var(--text);
+  word-break: break-word;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s ease;
+}
+
+.email:hover,
+.email:focus-visible {
+  color: var(--text);
+  background-size: 100% 2px;
+}
