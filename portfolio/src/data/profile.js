@@ -12,7 +12,8 @@ export const profile = {
     'Construyo aplicaciones web claras, rápidas y fáciles de usar.',
   // Párrafo de "Sobre mí" (puedes usar varias entradas en el arreglo)
   about: [
-    'Me gusta convertir ideas en productos que la gente realmente usa. Trabajo principalmente con JavaScript, React y Node, y disfruto cuidar los detalles: rendimiento, accesibilidad y una buena experiencia de usuario.',
+    'Soy un desarrollador apasionado por el aprendizaje continuo, tanto para crecer en lo personal como en lo profesional. Me gusta retarme y llevarme al límite en cada proyecto.',
+    'Trabajo principalmente con JavaScript, React y Node, y disfruto cuidar los detalles: rendimiento, accesibilidad y una buena experiencia de usuario.',
     'Actualmente estoy abierto a nuevas oportunidades y colaboraciones.',
   ],
   skills: ['JavaScript', 'React', 'Node.js', 'Ant Design', 'Git', 'SQL'],
@@ -20,7 +21,7 @@ export const profile = {
   email: 'tu-correo@ejemplo.com',
   links: [
     { label: 'GitHub', href: 'https://github.com/josuehmtz' },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/tu-usuario' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/josue-martinez-b01663231/' },
     // { label: 'CV', href: '/cv.pdf' }, // coloca el PDF en portfolio/public/
   ],
 }
