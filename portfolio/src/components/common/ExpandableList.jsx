@@ -30,7 +30,7 @@ export const ExpandableList = ({ items = [], visible = 3 }) => {
           onClick={() => setExpanded((v) => !v)}
           aria-expanded={expanded}
         >
-          {expanded ? 'Ver menos' : `Ver ${hidden} más`}
+          {expanded ? 'Show less' : `Show ${hidden} more`}
         </Button>
       )}
     </>

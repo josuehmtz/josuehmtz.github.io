@@ -21,7 +21,7 @@ Edita **`src/data/projects.js`** y agrega un objeto al arreglo:
   title: 'Mi proyecto',
   description: 'Qué hace y qué problema resuelve.',
   year: '2026',
-  tags: ['React', 'Node.js'],     // también generan los filtros
+  tags: ['React', 'Node.js'],     // tecnologías usadas
   image: '/projects/mi-proyecto.png', // opcional, en public/projects/
   demo: 'https://...',            // opcional
   repo: 'https://github.com/...', // opcional
@@ -39,7 +39,7 @@ src/
 ├── data/            Contenido (proyectos, perfil, experiencia)
 ├── config/          Configuración de navegación/secciones
 ├── theme/           Tokens de antd, proveedor de tema claro/oscuro
-├── hooks/           Lógica reutilizable (filtro por etiquetas, scroll, in-view…)
+├── hooks/           Lógica reutilizable (tema, scroll, in-view, portapapeles…)
 ├── utils/           Funciones puras (storage seguro, iniciales)
 ├── components/
 │   ├── common/      Piezas genéricas: Section, Container, Reveal, TagList…
@@ -53,12 +53,12 @@ src/
 ### Principios aplicados
 
 - **Responsabilidad única:** cada componente hace una sola cosa (p. ej.
-  `ProjectCover` solo pinta la portada; `useTagFilter` solo filtra).
+  `ProjectCover` solo pinta la portada; `useThemeMode` solo maneja el tema).
 - **Abierto/cerrado:** agregar proyectos, enlaces o secciones es editar datos,
   no modificar componentes.
 - **Inversión de dependencias:** los componentes reciben datos por props;
   solo las `sections/` conocen la capa de datos.
-- **Reutilización:** `Section`, `Reveal`, `TagList`, `TagFilter` y
+- **Reutilización:** `Section`, `Reveal`, `TagList`, `ExpandableList` y
   `ExternalLink` sirven en cualquier parte del sitio.
 - **Un solo origen de estilo:** los colores salen de los tokens de antd y se
   exponen como variables CSS (`theme/CssVariables.jsx`) para los CSS Modules.

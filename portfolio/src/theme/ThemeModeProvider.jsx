@@ -1,6 +1,5 @@
 import { createContext, useContext, useMemo } from 'react'
 import { ConfigProvider, App as AntApp } from 'antd'
-import esES from 'antd/locale/es_ES'
 import { useThemeMode } from '../hooks/useThemeMode'
 import { buildTheme } from './tokens'
 import { CssVariables } from './CssVariables'
@@ -14,7 +13,7 @@ export const ThemeModeProvider = ({ children }) => {
 
   return (
     <ThemeModeContext.Provider value={value}>
-      <ConfigProvider theme={buildTheme(mode)} locale={esES}>
+      <ConfigProvider theme={buildTheme(mode)}>
         <AntApp>
           <CssVariables />
           {children}

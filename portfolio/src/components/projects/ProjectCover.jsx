@@ -4,7 +4,7 @@ import styles from './projects.module.css'
 export const ProjectCover = ({ title, image }) => (
   <div className={styles.cover}>
     {image ? (
-      <img src={image} alt={`Vista previa de ${title}`} loading="lazy" className={styles.coverImage} />
+      <img src={image} alt={`Screenshot of ${title}`} loading="lazy" className={styles.coverImage} />
     ) : (
       <span className={styles.coverInitial} aria-hidden>
         {title.charAt(0)}

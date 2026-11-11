@@ -6,7 +6,7 @@ import styles from './projects.module.css'
 /** Cuadrícula responsiva de proyectos. Los destacados ocupan dos columnas. */
 export const ProjectGrid = ({ projects }) => {
   if (projects.length === 0) {
-    return <Empty description="No hay proyectos con esta etiqueta" />
+    return <Empty description="No projects yet" />
   }
 
   return (

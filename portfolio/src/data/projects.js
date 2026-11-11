@@ -7,7 +7,7 @@
 //    title        (obligatorio) nombre del proyecto
 //    description  (obligatorio) una o dos frases
 //    year         año o periodo, ej. '2025'
-//    tags         tecnologías; también sirven como filtros
+//    tags         tecnologías usadas
 //    image        opcional: ruta a una imagen en portfolio/public/
 //                 ej. '/projects/mi-proyecto.jpg'
 //    demo         opcional: enlace al sitio en vivo
@@ -32,22 +32,12 @@ export const projects = [
   {
     title: 'Altaria Eventos',
     description:
-      'Sitio one-page para un salón de eventos en Zapopan. Incluye galería con visor, formulario de cotización por WhatsApp y un panel /admin (Decap CMS) para que el cliente cambie sus fotos sin tocar código: al publicar, Netlify optimiza las imágenes a WebP, corre las pruebas y despliega.',
+      'One-page website for an event venue in Zapopan, with a photo gallery and lightbox, a WhatsApp quote form, and an /admin panel (Decap CMS) so the client can update photos without touching code. Each publish triggers Netlify to optimize images to WebP, run the tests and deploy.',
     year: '2026',
     tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Decap CMS', 'Netlify', 'Vitest'],
     image: '/projects/altaria-eventos.jpg',
     demo: 'https://altariaeventos.com',
     repo: 'https://github.com/josuehmtz/altaria-eventos',
-    featured: true,
-  },
-  {
-    title: 'Portafolio personal',
-    description:
-      'Este sitio. Componentes reutilizables con Ant Design, contenido separado en archivos de datos, tema claro/oscuro y despliegue en GitHub Pages.',
-    year: '2026',
-    tags: ['React', 'Ant Design', 'Vite'],
-    repo: 'https://github.com/josuehmtz/josuehmtz.github.io',
-    demo: 'https://josuehmtz.github.io',
     featured: true,
   },
 ]

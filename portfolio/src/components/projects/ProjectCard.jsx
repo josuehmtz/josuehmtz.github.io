@@ -35,12 +35,12 @@ export const ProjectCard = ({ project }) => {
           <Flex gap={8} wrap className={styles.links}>
             {demo && (
               <ExternalLink href={demo} icon={<GlobalOutlined />} size="small">
-                Demo
+                Live site
               </ExternalLink>
             )}
             {repo && (
               <ExternalLink href={repo} icon={<GithubOutlined />} size="small">
-                Código
+                Code
               </ExternalLink>
             )}
           </Flex>

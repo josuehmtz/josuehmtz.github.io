@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Button, Drawer, Flex } from 'antd'
 import { MenuOutlined } from '@ant-design/icons'
-import { SECTIONS } from '../../config/navigation'
+import { HOME_ID, SECTIONS } from '../../config/navigation'
 import { profile } from '../../data/profile'
 import { useScrolled } from '../../hooks/useScrolled'
 import { getInitials } from '../../utils/text'
@@ -29,8 +29,8 @@ export const AppHeader = () => {
   return (
     <header className={`${styles.header} ${scrolled ? styles.headerScrolled : ''}`}>
       <Container>
-        <nav className={styles.nav} aria-label="Principal">
-          <a href="#inicio" className={styles.logo} aria-label="Ir al inicio">
+        <nav className={styles.nav} aria-label="Main">
+          <a href={`#${HOME_ID}`} className={styles.logo} aria-label="Back to top">
             {getInitials(profile.name)}.
           </a>
 
@@ -44,14 +44,14 @@ export const AppHeader = () => {
               type="text"
               shape="circle"
               icon={<MenuOutlined />}
-              aria-label="Abrir menú"
+              aria-label="Open menu"
               onClick={() => setOpen(true)}
             />
           </Flex>
         </nav>
       </Container>
 
-      <Drawer open={open} onClose={close} placement="right" size={260} title="Menú">
+      <Drawer open={open} onClose={close} placement="right" size={260} title="Menu">
         <NavLinks vertical onNavigate={close} />
       </Drawer>
     </header>

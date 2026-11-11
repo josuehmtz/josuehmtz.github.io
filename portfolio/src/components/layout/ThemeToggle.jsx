@@ -4,7 +4,7 @@ import { useThemeModeContext } from '../../theme/ThemeModeProvider'
 
 export const ThemeToggle = () => {
   const { mode, toggle } = useThemeModeContext()
-  const label = mode === 'dark' ? 'Modo claro' : 'Modo oscuro'
+  const label = mode === 'dark' ? 'Light mode' : 'Dark mode'
 
   return (
     <Tooltip title={label}>

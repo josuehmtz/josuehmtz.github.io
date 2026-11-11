@@ -6,12 +6,12 @@ export const useCopyToClipboard = () => {
   const { message } = App.useApp()
 
   return useCallback(
-    async (text, successMsg = 'Copiado') => {
+    async (text, successMsg = 'Copied') => {
       try {
         await navigator.clipboard.writeText(text)
         message.success(successMsg)
       } catch {
-        message.error('No se pudo copiar')
+        message.error('Could not copy')
       }
     },
     [message]

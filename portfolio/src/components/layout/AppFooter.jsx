@@ -1,3 +1,4 @@
+import { HOME_ID } from '../../config/navigation'
 import { profile } from '../../data/profile'
 import { Container } from '../common'
 import styles from './layout.module.css'
@@ -8,8 +9,8 @@ export const AppFooter = () => (
       <span>
         © {new Date().getFullYear()} {profile.name}
       </span>
-      <a href="#inicio" className={styles.navLink}>
-        Volver arriba ↑
+      <a href={`#${HOME_ID}`} className={styles.navLink}>
+        Back to top ↑
       </a>
     </Container>
   </footer>

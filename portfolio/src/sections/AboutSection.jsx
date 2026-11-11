@@ -1,13 +1,10 @@
 import { Typography } from 'antd'
 import { profile } from '../data/profile'
-import { sectionIndex } from '../config/navigation'
 import { LabeledGroup, Reveal, Section, TagList } from '../components/common'
 import styles from './sections.module.css'
 
-const ID = 'sobre-mi'
-
 export const AboutSection = () => (
-  <Section id={ID} index={sectionIndex(ID)} title="Sobre mí">
+  <Section id="about">
     <div className={styles.aboutGrid}>
       <Reveal>
         {profile.about.map((paragraph) => (
