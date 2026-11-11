@@ -5,6 +5,7 @@ import { Container } from './components/common'
 import {
   AboutSection,
   ContactSection,
+  EducationSection,
   ExperienceSection,
   HeroSection,
   ProjectsSection,
@@ -21,6 +22,7 @@ const App = () => (
             <ProjectsSection />
             <ExperienceSection />
             <AboutSection />
+            <EducationSection />
             <ContactSection />
           </main>
         </Container>

@@ -120,3 +120,85 @@
     animation: none;
   }
 }
+
+/* ── FactList ───────────────────────────── */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  max-width: 640px;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--line);
+}
+
+.fact {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 4px;
+  padding: 14px 16px;
+  background: var(--bg);
+}
+
+.factValue {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.factLabel {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* ── ExpandableList ─────────────────────── */
+.bullets {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.bullets li {
+  position: relative;
+  padding-left: 18px;
+  max-width: 68ch;
+}
+
+.bullets li::before {
+  content: '›';
+  position: absolute;
+  left: 2px;
+  font-family: var(--font-mono);
+  color: var(--accent);
+}
+
+.expandButton:global(.ant-btn) {
+  align-self: flex-start;
+  margin-top: -4px;
+  padding-inline: 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+/* ── LabeledGroup ───────────────────────── */
+.labeledGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.groupLabel {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+}

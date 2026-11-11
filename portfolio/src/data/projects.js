@@ -9,7 +9,7 @@
 //    year         año o periodo, ej. '2025'
 //    tags         tecnologías; también sirven como filtros
 //    image        opcional: ruta a una imagen en portfolio/public/
-//                 ej. '/projects/mi-proyecto.png'
+//                 ej. '/projects/mi-proyecto.jpg'
 //    demo         opcional: enlace al sitio en vivo
 //    repo         opcional: enlace al repositorio
 //    featured     opcional: true para mostrarlo destacado (más grande)
@@ -30,28 +30,24 @@
 /** @type {Project[]} */
 export const projects = [
   {
+    title: 'Altaria Eventos',
+    description:
+      'Sitio one-page para un salón de eventos en Zapopan. Incluye galería con visor, formulario de cotización por WhatsApp y un panel /admin (Decap CMS) para que el cliente cambie sus fotos sin tocar código: al publicar, Netlify optimiza las imágenes a WebP, corre las pruebas y despliega.',
+    year: '2026',
+    tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Decap CMS', 'Netlify', 'Vitest'],
+    image: '/projects/altaria-eventos.jpg',
+    demo: 'https://altariaeventos.com',
+    repo: 'https://github.com/josuehmtz/altaria-eventos',
+    featured: true,
+  },
+  {
     title: 'Portafolio personal',
     description:
-      'Este sitio. Minimalista, rápido y fácil de mantener: los proyectos se agregan desde un solo archivo.',
+      'Este sitio. Componentes reutilizables con Ant Design, contenido separado en archivos de datos, tema claro/oscuro y despliegue en GitHub Pages.',
     year: '2026',
     tags: ['React', 'Ant Design', 'Vite'],
     repo: 'https://github.com/josuehmtz/josuehmtz.github.io',
     demo: 'https://josuehmtz.github.io',
     featured: true,
-  },
-  {
-    title: 'Proyecto de ejemplo',
-    description:
-      'Reemplaza este texto con lo que hace tu proyecto y el problema que resuelve.',
-    year: '2025',
-    tags: ['JavaScript', 'Node.js'],
-    repo: 'https://github.com/josuehmtz',
-  },
-  {
-    title: 'Otro proyecto',
-    description:
-      'Una breve descripción. Si tiene captura de pantalla, agrégala con el campo image.',
-    year: '2024',
-    tags: ['React', 'API'],
   },
 ]

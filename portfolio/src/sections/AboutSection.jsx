@@ -1,7 +1,7 @@
 import { Typography } from 'antd'
 import { profile } from '../data/profile'
 import { sectionIndex } from '../config/navigation'
-import { Reveal, Section, TagList } from '../components/common'
+import { LabeledGroup, Reveal, Section, TagList } from '../components/common'
 import styles from './sections.module.css'
 
 const ID = 'sobre-mi'
@@ -16,11 +16,12 @@ export const AboutSection = () => (
           </Typography.Paragraph>
         ))}
       </Reveal>
-      <Reveal delay={100}>
-        <Typography.Text type="secondary" className={styles.label}>
-          Herramientas
-        </Typography.Text>
-        <TagList tags={profile.skills} gap={8} />
+      <Reveal delay={100} className={styles.skillGroups}>
+        {profile.skills.map(({ group, items }) => (
+          <LabeledGroup key={group} label={group}>
+            <TagList tags={items} />
+          </LabeledGroup>
+        ))}
       </Reveal>
     </div>
   </Section>

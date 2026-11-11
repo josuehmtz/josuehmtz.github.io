@@ -1,17 +1,17 @@
 import { Button, Flex, Typography } from 'antd'
 import { ArrowDownOutlined } from '@ant-design/icons'
 import { profile } from '../data/profile'
-import { ExternalLink, Reveal, StatusBadge } from '../components/common'
+import { ExternalLink, FactList, Reveal, StatusBadge } from '../components/common'
 import styles from './sections.module.css'
 
 export const HeroSection = () => {
-  const { name, role, location, headline, available, links } = profile
+  const { name, role, location, headline, available, availabilityLabel, facts, links } = profile
 
   return (
     <section id="inicio" className={styles.hero}>
       {available && (
         <Reveal>
-          <StatusBadge>Disponible para proyectos</StatusBadge>
+          <StatusBadge>{availabilityLabel ?? 'Disponible para proyectos'}</StatusBadge>
         </Reveal>
       )}
 
@@ -37,6 +37,10 @@ export const HeroSection = () => {
             </ExternalLink>
           ))}
         </Flex>
+      </Reveal>
+
+      <Reveal delay={320}>
+        <FactList facts={facts} />
       </Reveal>
     </section>
   )
